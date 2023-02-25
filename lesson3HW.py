@@ -14,18 +14,18 @@ N – количество элементов в массиве. В послед
     -> 1
 
 '''
-n = int(input("Введите натуральное число, количество элементов в массиве: "))
-list_1 = [random.randint(0, 9) for i in range(n)] 
-print(' '.join(map(str, list_1)))
-x = int(input("Введите искомое число: "))
+# n = int(input("Введите натуральное число, количество элементов в массиве: "))
+# list_1 = [random.randint(0, 9) for i in range(n)] 
+# print(' '.join(map(str, list_1)))
+# x = int(input("Введите искомое число: "))
 
-counter = 0
+# counter = 0
 
-for i in list_1:
-    if i == x:
-        counter += 1
+# for i in list_1:
+#     if i == x:
+#         counter += 1
 
-print(f"количество повторов числа - {x} в массиве равняется - {counter}.")
+# print(f"количество повторов числа - {x} в массиве равняется - {counter}.")
 
 '''
 Задача 18: Требуется найти в массиве A[1..N] самый близкий по величине элемент 
@@ -39,8 +39,30 @@ N – количество элементов в массиве. В послед
     1 2 3 4 5
     6
     -> 5
-
 '''
+n = int(input("Введите натуральное число, количество элементов в массиве: "))
+list_1 = [random.randint(0, 10) for i in range(n)] 
+print(' '.join(map(str, list_1)))
+x = int(input("Введите искомое число: "))
+
+min = 100
+rez = set()
+for i in list_1:
+    if i == x:
+        rez.clear()
+        rez.add(i)
+        break
+
+    k = abs(i-x)
+    if k < min:
+        min = k
+        rez.clear()
+        rez.add(i)
+    elif k == min:
+        rez.add(i)
+
+for i in rez:
+    print(i)        
 
 '''
 *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность. 
