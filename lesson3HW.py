@@ -16,7 +16,7 @@ N – количество элементов в массиве. В послед
 '''
 n = int(input("Введите натуральное число, количество элементов в массиве: "))
 list_1 = [random.randint(0, 9) for i in range(n)] 
-print(list_1)
+print(' '.join(map(str, list_1)))
 x = int(input("Введите искомое число: "))
 
 counter = 0
