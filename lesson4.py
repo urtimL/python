@@ -26,11 +26,13 @@ I'm sure that the shells are sea shore shells
 Output: 13
 """
 
-# n = input('Введите текст: ').split()
-# dict = {}
-# for i in n:
-#     dict[i.lower()]=0
-# # print(len(dict.keys()))
+n = "She sells sea shells on the sea shore The shells that she sells" 
+k = "are sea shells I'm sure.So if she sells sea shells on the sea shore"
+l = "I'm sure that the shells are sea shore shells"
+
+print(len(n.split()))
+print(len(k.split()))
+print(len(l.split()))
 
 """
 Задача No29. Решение в группах
@@ -106,18 +108,18 @@ unton
 Sample Output 2:
 1 2 7 8
 """
-n = int(input())
-list1 = []
-for i in range(n):
-    a = input()
-    if 'a' in a:
-        a = a[a.find('a'):]
-        if 'n' in a:
-            a = a[a.find('n'):]
-            if 't' in a:
-                a = a[a.find('t'):]
-                if 'o' in a:
-                    a = a[a.find('o'):]
-                    if 'n' in a:
-                        list1.append(i + 1)                   
-print(list1)
+# n = int(input())
+# list1 = []
+# for i in range(n):
+#     a = input()
+#     if 'a' in a:
+#         a = a[a.find('a'):]
+#         if 'n' in a:
+#             a = a[a.find('n'):]
+#             if 't' in a:
+#                 a = a[a.find('t'):]
+#                 if 'o' in a:
+#                     a = a[a.find('o'):]
+#                     if 'n' in a:
+#                         list1.append(i + 1)                   
+# print(list1)
