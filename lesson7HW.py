@@ -33,13 +33,13 @@
 6 12 18 24 30 36
 
 """
-def print_operation_table(lmbd):
-    num_rows = int(input("введите количество строк: "))
-    num_columns = int(input("введите количество столбцов: "))
-    
+num_rows = int(input("введите количество строк: "))
+num_columns = int(input("введите количество столбцов: "))
+
+def print_operation_table(lmbd, num_rows, num_columns):
     for y in [y for y in range(1, num_rows + 1)]:
         for x in [x for x in range(1, num_columns + 1)]:
             print(lmbd(x,y), end = "\t") 
         print()   
 
-print_operation_table(lambda x, y: x * y)
+print_operation_table(lambda x, y: x * y, num_rows, num_columns)
